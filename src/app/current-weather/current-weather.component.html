@@ -1,0 +1,16 @@
+<main>
+  <article>
+    <section>
+      <span>{{ current.city }}, {{current.cuntry}}</span>
+      <span>{{ current.date | date:'fullDate'}}</span>
+    </section>
+    <section>
+      <img [src]='current.image'>
+      <br/>
+      <span>{{ current.temperature | number: '1.0-0' }}˚C</span>
+    </section>
+    <section>
+      <span>{{ current.description }}</span>
+    </section>
+  </article>
+</main>

@@ -1,17 +1,17 @@
 <main>
 <h2>Local Weather</h2>
-  <article>
+  <article *ngIf="current">
     <section>
-      <span>{{ current.city }}, {{current.country}},</span>
-      <span>{{ current.date | date:'fullDate'}}</span>
+      <span>{{ current?.city }}, {{current?.country}},</span>
+      <span>{{ current?.date | date:'fullDate'}}</span>
     </section>
     <section>
-      <img [src]='current.image'>
+      <img [src]='current?.image'>
       <br />
-      <span>{{ current.temperature | number: '1.0-0' }}˚C</span>
+      <span>{{ current?.temperature | number: '1.0-0' }}˚C</span>
     </section>
     <section>
-      <span>{{ current.description }}</span>
+      <span>{{ current?.description }}</span>
     </section>
   </article>
 </main>

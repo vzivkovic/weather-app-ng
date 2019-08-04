@@ -9,7 +9,7 @@ import {WeatherService} from '../weather/weather.service';
 })
 export class CurrentWeatherComponent implements OnInit {
 
-  protected current: ICurrentWeather;
+  public current: ICurrentWeather;
 
   constructor(private weatherService: WeatherService) {
 

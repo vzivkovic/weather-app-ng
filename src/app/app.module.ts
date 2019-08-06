@@ -7,6 +7,7 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserModule,
     HttpClientModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

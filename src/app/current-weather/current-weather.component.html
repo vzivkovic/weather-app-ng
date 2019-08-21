@@ -1,16 +1,24 @@
 <main>
   <article *ngIf="current">
-    <section>
-      <span>{{ current?.city }}, {{current?.country}},</span>
-      <span>{{ current?.date | date:'fullDate'}}</span>
+    
+    <section fxLayout="row">
+      
+      <div class="mat-title no-margin" fxFlex="66%">{{ current?.city }}, {{current?.country}},</div>
+      <div class="mat-subheading-2 no-margin right" fxFlex>{{ current?.date | date:'EEEE MMM d'}}</div>
+    
+    </section>
+    
+    <section fxLayout="row" fxLayoutAlign="center center">
+      
+      <div fxFlex="66%">
+        <img style="zoom: 175%" [src]='current?.image'>
+        <br/>
+      </div>
+      <div class="mat-title no-margin right" fxFlex>{{ current?.temperature | number: '1.0-0' }}˚C</div>
+    
     </section>
     <section>
-      <img [src]='current?.image'>
-      <br />
-      <span>{{ current?.temperature | number: '1.0-0' }}˚C</span>
-    </section>
-    <section>
-      <span>{{ current?.description }}</span>
+      <div fxLayoutAlign="center" class="mat-caption">{{ current?.description }}</div>
     </section>
   </article>
 </main>
